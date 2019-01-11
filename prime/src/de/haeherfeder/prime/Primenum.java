@@ -24,16 +24,19 @@ public class Primenum
     public Primenum()
     {
        System.out.println("Welche Primzahl wollen Sie wissen?");
+       @SuppressWarnings("resource")
        Scanner user_input = new Scanner( System.in );
        try{
             x = Integer.parseInt(user_input.next());
-            user_input.close();}
+            }
        catch(NumberFormatException e){
-            System.out.println("Ungültige Eingabe");
+            System.out.println("Invalid input");
             main(null);
        }
-       System.out.print("Die "+x+". Primzahl ist ");
+       System.out.print("Die "+x+". Primzahl ist: \n");
+       System.out.print("The "+x+". primenumber is: ");
        new Primenum(x);
+       return;
     }
     /**
      * print out the x. prime
@@ -50,5 +53,6 @@ public class Primenum
            i++;
        }
        System.out.println();
+       return;
     }
 }

@@ -23,16 +23,16 @@ public class Primelist
      */
     public Primelist()
     {
+       @SuppressWarnings("resource")
        Scanner user_input = new Scanner( System.in );
        try{
           x = Integer.parseInt(user_input.next());}
        catch(NumberFormatException e){
-          System.out.println("Ungültige Eingabe");
-          user_input.close();
+          System.out.println("Invalid Input");
           new Primelist();
        }
-       user_input.close();
        System.out.println("Die ersten "+x+" Primzahlen sind: ");
+       System.out.println("The first "+x+"primenumbers are: ");
        new Primelist(x);
        return;
     }

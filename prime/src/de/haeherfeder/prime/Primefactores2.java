@@ -23,18 +23,18 @@ public class Primefactores2
      */
     public Primefactores2()
     {
-        System.out.println("Bitte Zahl eingeben.");
-        Scanner scanner = new  Scanner(System.in);
+        System.out.println("Please enter a number");
+        @SuppressWarnings("resource")
+		Scanner scanner = new  Scanner(System.in);
         String user_input = scanner.next();
-        scanner.close();
         try{
         x = Integer.parseInt(user_input);}
         catch(NumberFormatException e){
             if(user_input=="exit"){System.exit(0); }
-            System.out.println("Ungültige Eingabe");
-            main(null);
+            System.out.println("Invalid input");
+            return;
         }
-        System.out.print(x+" hat folgende Primfaktoren: ");
+        System.out.print(x+" has this primefactores: ");
         for(int i=2;i<x/2+1;i++){
             if(x % i==0){
                 //System.out.print(i+"getestet ");
@@ -48,8 +48,9 @@ public class Primefactores2
         }
         if(!prime.isPr(x)){
             System.out.println("\nEs gab einen Fehler, ist der eingegebene Wert im Wertebereich ?\n Der Rest ist "+x);
-            main(null);
+            return;
         }
         System.out.println(x);
+        return;
     }
 }

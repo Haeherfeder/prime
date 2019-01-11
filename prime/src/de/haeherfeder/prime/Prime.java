@@ -5,14 +5,14 @@ import java.util.Scanner;
  * imports java.util.Scanner;
  * 
  * @author Haeherfeder 
- * @version 1.0.3 unstable
+ * @version 1.0.3 stable
  * 
  */
 public class Prime
 {
     // instance variables
         private long x;
-        private Scanner user_input = new Scanner( System.in );
+        Scanner user_input = new Scanner( System.in );
     /**
     * Starts the prime, if you want to use this class without other Starter classes.
     */
@@ -62,14 +62,15 @@ public class Prime
      * like prime(int x), but it it asks the user for the number.
      */
      public Prime(){
+    	System.out.println("Please enter the number");
         try{
              x = Long.parseLong(user_input.next());}
         catch(NumberFormatException e){
-            System.out.println("Ungültige Eingabe");
+            System.out.println("Invalid Input/Ungültige Eingabe");
             new Prime();
         }
         if(x<0){
-            System.out.println("Ungültige Eingabe");
+            System.out.println("Invalid Input/Ungültige Eingabe");
             new Prime();
         }
          new Prime(x);

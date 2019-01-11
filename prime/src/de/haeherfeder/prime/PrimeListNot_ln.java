@@ -19,15 +19,17 @@ public class PrimeListNot_ln
      */
     public PrimeListNot_ln()
     {
-       Scanner user_input = new Scanner( System.in );
+       @SuppressWarnings("resource")
+	Scanner user_input = new Scanner( System.in );
        try{
           x = Integer.parseInt(user_input.next());
-          user_input.close();}
+          }
        catch(NumberFormatException e){
-          System.out.println("Ungültige Eingabe");
+          System.out.println("Invalid input");
           new PrimeListNot_ln();
        }
-       System.out.print("Die ersten "+x+" Primzahlen sind: ");
+       System.out.print("Die ersten "+x+" Primzahlen sind: \n");
+       System.out.print("The first "+x+" primenumbers are ");
        new PrimeListNot_ln(x);
        return;
     }
