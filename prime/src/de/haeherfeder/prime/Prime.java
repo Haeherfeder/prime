@@ -1,11 +1,10 @@
 package de.haeherfeder.prime;
-
 import java.util.Scanner;
 /**
  * imports java.util.Scanner;
  * 
  * @author Haeherfeder 
- * @version 1.0.3 stable
+ * @version 1.0.4 stable
  * 
  */
 public class Prime
@@ -13,13 +12,6 @@ public class Prime
     // instance variables
         private long x;
         Scanner user_input = new Scanner( System.in );
-    /**
-    * Starts the prime, if you want to use this class without other Starter classes.
-    */
-    public static void main(String[] args) {
-        new Prime();
-        main(null);
-    }
     /**
      * method for say if it is a prime and say all factors (without himself) of an number if it isnt a prime.
      */
@@ -42,7 +34,7 @@ public class Prime
         return;
     }
     /**
-     * the method which profe if it is an prime
+     * the method which proof if it is an prime
      * (true = it is a prime;false=it is not a prime.)
      */
     public boolean isPr(long x){

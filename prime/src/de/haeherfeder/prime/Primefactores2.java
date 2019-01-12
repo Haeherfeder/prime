@@ -5,21 +5,16 @@ import java.util.Scanner;
  * it dependens on de.haeherfeder.prime.prime and uses(/import) java.util.Scanner (for the input)
  * 
  * @author Haeherfeder 
- * @version 1.0.1 unstable
+ * @version 1.0.2 unstable
  */
 public class Primefactores2
 {
     // instance variables - replace the example below with your own
     private int x;
     Prime prime = new Prime(0);
-    Scanner user_input = new Scanner( System.in );
-    public static void main(String[] args) {
-        new Primefactores2();
-        //main(null);
-    }
-    
+    Scanner user_input = new Scanner( System.in );    
     /**
-     * Constructor for objects of class primefactores
+     * Constructor for objects of class primefactor
      */
     public Primefactores2()
     {
@@ -48,6 +43,7 @@ public class Primefactores2
         }
         if(!prime.isPr(x)){
             System.out.println("\nEs gab einen Fehler, ist der eingegebene Wert im Wertebereich ?\n Der Rest ist "+x);
+            System.out.println("Invalid input"+x);
             return;
         }
         System.out.println(x);

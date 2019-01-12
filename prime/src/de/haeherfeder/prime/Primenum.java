@@ -5,19 +5,13 @@ import java.util.Scanner;
  * it dependens on de.haeherfeder.prime.prime and uses(/imports) java.util.Scanner (for the input)
  * 
  * @author Haeherfeder 
- * @version 1.0.0 stable
+ * @version 1.0.1 stable
  * 
  */
 public class Primenum
 {
     private Prime prime = new Prime(0);
     private int x;
-    /**
-     * starts primenum();
-     */
-    public static void main(String[] args) {
-        new Primenum();
-    }
     /**
      * ask a user for an number, and does primenum(x);
      */
@@ -31,7 +25,7 @@ public class Primenum
             }
        catch(NumberFormatException e){
             System.out.println("Invalid input");
-            main(null);
+            new Primenum();
        }
        System.out.print("Die "+x+". Primzahl ist: \n");
        System.out.print("The "+x+". primenumber is: ");

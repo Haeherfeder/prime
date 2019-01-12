@@ -6,18 +6,12 @@ import java.util.Scanner;
  * 
  * 
  * @author Haeherfeder 
- * @version 1.0.1 stable
+ * @version 1.0.2 stable
  * 
  */
 public class Primelist
 {
     private int x;
-    /** 
-     * Starts the Primelist, if you want to use this class without other Starter classes.
-     */
-    public static void main(String[] args) {
-        new Primelist();
-    }
     /**
      * It uses an input to print out the first x primes. it tries each nummber, if it is a prime with de.haeherfeder.prime.prime.isPr(); 
      */
